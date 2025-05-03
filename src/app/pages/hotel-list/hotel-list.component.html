@@ -1,0 +1,27 @@
+<main class="hotel-list-container">
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search by hotel name or location..."
+      [(ngModel)]="searchText"
+    />
+  </div>
+
+  <!-- Hotels Display -->
+  <div class="hotels-grid">
+    <div
+      class="hotel-card"
+      *ngFor="let hotel of filteredHotels()"
+    >
+      <img [src]="hotel.roomImages[0]" alt="{{ hotel.name }}" />
+      <h3>{{ hotel.name }}</h3>
+      <p><strong>Location:</strong> {{ hotel.location }}</p>
+      <p><strong>Rating:</strong> {{ hotel.rating }} ⭐</p>
+      <p><strong>Price:</strong> ${{ hotel.price }} per night</p>
+      <p><strong>Services:</strong> {{ hotel.services.join(', ') }}</p>
+      <a [href]="hotel.mapUrl" target="_blank" class="map-link">View on Map</a>
+      <button class="check-btn" [routerLink]="['/hotel', hotel.id]">View Details</button>
+    </div>
+  </div>
+</main>

@@ -1,5 +1,43 @@
-.Main-Nav{
+.navbar-container {
+    background-color: #2c1a10;
+    color: #f2e6d9;
+    padding: 20px;
+  }
+  
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+    padding: 10px 0;
+  }
+  
+  .brand {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .check-btn {
+    background-color: #c39b77;
+    border: none;
+    padding: 10px 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #d2b48c;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .main-nav a {
+    text-decoration: none;
+    color: #2c1a10;
+    font-weight: 500;
+  }
+  
